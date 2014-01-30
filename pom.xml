@@ -40,7 +40,7 @@
   <artifactId>poi</artifactId>
   <packaging>jar</packaging>
   <name>poi</name>
-  <version>1.12</version>
+  <version>1.13-SNAPSHOT</version>
 
   <description>Commonly used programming tasks in java</description>
   <url>http://maven.apache.org</url>
