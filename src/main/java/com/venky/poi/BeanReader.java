@@ -11,6 +11,7 @@ import java.util.List;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -96,8 +97,8 @@ public class BeanReader<B> extends BeanIntrospector<B>{
             Object value = null;
             if (isNumeric(getter.getReturnType())) {
                 switch (cell.getCellType()) {
-                    case Cell.CELL_TYPE_NUMERIC:
-                    case Cell.CELL_TYPE_FORMULA: 
+                    case NUMERIC:
+                    case FORMULA:
                         value = cell.getNumericCellValue();
                         break;
                     default :
